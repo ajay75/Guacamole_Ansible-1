@@ -49,6 +49,7 @@
       - libtool 
       - libuv-devel 
       - freerdp
+      - firewalld
       - mariadb-server
       - pkgconfig
       - libtelnet
