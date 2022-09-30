@@ -292,7 +292,7 @@
         dest: "/etc/guacamole/guacamole.properties"
         content: |
           MySQL properties
-          mysql-hostname: localhost
+          mysql-hostname: 127.0.0.1
           mysql-port: 3306
           mysql-database: guacdb
           mysql-username: guacuser
@@ -333,6 +333,17 @@
       service:
         name: tomcat9
         state: restarted
+        
+    - name: Delete lines containing a keyword
+      lineinfile:
+        path: /etc/hosts
+        regexp: ::1
+        state: absent
+        
+     - name: Restart guacd
+       service:
+         name: guacd
+         state: restarted
 
     - name: Cleanup
       file:
