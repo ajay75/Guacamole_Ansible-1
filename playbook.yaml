@@ -351,10 +351,10 @@
         regexp: ::1
         state: absent
         
-     - name: Restart guacd
-       service:
-         name: guacd
-         state: restarted
+    - name: Restart guacd
+      service:
+        name: guacd
+        state: restarted
 
     - name: Cleanup
       file:
