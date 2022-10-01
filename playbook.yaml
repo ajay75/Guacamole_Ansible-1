@@ -53,18 +53,7 @@
     # - name: Print Package Facts
     #   debug:
     #     var: ansible_facts.packages
-    
-    - name: service firewall enable
-      service:
-        name: firewalld
-        state: enable
-        immediate: true
-        
-    - name: service firewalld start
-      service:
-        name: firewalld
-        state: start        
-        
+             
     - name: Open Firewall for Guacamole/Tomcat on 8080/TCP
       firewalld:
         port: 8080/tcp
