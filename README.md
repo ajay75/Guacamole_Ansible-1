@@ -2,7 +2,7 @@
 
 1. Start by cloning the repo to the machine you want to install Guacamole: 
 
-`git clone https://github.com/ByteProTips/Guacamole_Ansible.git`
+`git clone https://github.com/ajay75/guacamole-ansible.git`
 
 2. Run `./setup.sh`
 
